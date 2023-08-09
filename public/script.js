@@ -1,7 +1,7 @@
 function ResourceItem({ name, length }) {
   return `
     <li>
-      <a href="${name}">/${name}</a>
+      <a href="/$/${name}">/${name}</a>
       <sup>${length ? `${length}x` : 'object'}</sup>
     </li>
   `
@@ -36,7 +36,7 @@ function ResourcesBlock({ db }) {
 }
 
 window
-  .fetch('db')
+  .fetch('$')
   .then((response) => response.json())
   .then(
     (db) =>

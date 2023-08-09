@@ -18,7 +18,7 @@ function prettyPrint(argv, object, rules) {
     // skip printing $schema nodes
     if (prop === '$schema') continue
 
-    console.log(`  ${root}/${prop}`)
+    console.log(`  ${root}/$/${prop}`)
   }
 
   if (rules) {

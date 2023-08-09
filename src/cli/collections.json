@@ -1,0 +1,53 @@
+{
+    "shakespeare": {
+        "documents": {
+            "merchant-of-venice": {
+                "text": "The modeling of a deterministic dynamical system relies on the concept of a phase space, the collection of possible system states",
+                "size": 117826
+            },
+            "julius-caesar": {
+                "text": "The system state at time t consists of all information needed to uniquely determine the future system states for times ≥ t; e.g., in many cases, positions and velocities.",
+                "size": 224
+            },
+            "twelfth-night": {
+                "text": "For a system that can be modeled mathematically, the phase space is known from the equations of motion.",
+                "size": 533
+            }
+        },
+        "size": 416
+    },
+    "charles-dickens": {
+        "documents": {
+            "great-expectations": {
+                "text": "Lymnaea is an attractive model for neuroscientists interested in understanding the behavioral, neural and molecular basis of associative (Pavlovian) learning and memory.",
+                "size": 224
+            },
+            "oliver-twist": {
+                "text": "The behavior of this pond snail is surprisingly dynamic and snails can be trained to respond to a wide variety of sensory cues.",
+                "size": 373
+            },
+            "a-tale-of-two-cities": {
+                "text": "Feeding and respiration have proved to be particularly useful for Lymnaea learning studies because the neural circuitry underlying these behaviors is well-described (Benjamin, 2008)",
+                "size": 96
+            }
+        },
+        "size": 384
+    },
+    "agatha-christie": {
+        "documents": {
+            "the-third-girl": {
+                "text": "Temporal difference (TD) learning is an approach to learning how to predict a quantity that depends on future values of a given signal.",
+                "size": 3212
+            },
+            "the-murder-of-roger-ackroyd": {
+                "text": "The name TD derives from its use of changes, or differences, in predictions over successive time steps to drive the learning process.",
+                "size": 455232
+            },
+            "muder-on-orient-express": {
+                "text": "The prediction at any given time step is updated to bring it closer to the prediction of the same quantity at the next time step",
+                "size": 50753
+            }
+        },
+        "size": 160
+    }
+}

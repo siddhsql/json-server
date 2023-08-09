@@ -1,6 +1,5 @@
-module.exports = {
-  getPage,
-}
+const _ = require('lodash');
+const _path = require('./path').Path;
 
 function getPage(array, page, perPage) {
   const obj = {}
@@ -27,4 +26,46 @@ function getPage(array, page, perPage) {
   }
 
   return obj
+}
+
+function truncate(x, d) {
+  if (_.isPlainObject(x)) {
+    if (d === 0) {
+      return Object.keys(x).length;
+    } else {
+      var y = {};
+      for (var k in x) {
+        y[k] = truncate(x[k], d - 1);
+      }
+      return y;
+    }
+  } else if (_.isArray(x)) {
+    if (d === 0) {
+      return x.length;
+    } else {
+      var y = [];
+      for (var v of x) {
+        y.push(truncate(v, d - 1));
+      }
+      return y;
+    }
+  } else {
+    return x;
+  }
+}
+
+function Path(path) {
+  if (path.constructor.name === 'String') {
+    return new _path(path);
+  } else if (path.constructor.name === 'Path') {
+    return path;
+  } else {
+    throw new Error(`Invalid data type for path. Must be String or Path.`);
+  }
+}
+
+module.exports = {
+  getPage,
+  truncate,
+  Path
 }
